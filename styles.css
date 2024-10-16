@@ -55,6 +55,11 @@ section {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
 }
 
 h1, h2, h3 {
@@ -136,6 +141,25 @@ footer {
   margin-top: 2rem;
 }
 
+a {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+.project-item h3 a {
+  color: #3498db;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.project-item h3 a:hover {
+  color: #2980b9;
+}
+
 @media (max-width: 768px) {
   nav ul {
       flex-direction: column;
@@ -149,4 +173,15 @@ footer {
   .skills-list {
       grid-template-columns: 1fr;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
 }
